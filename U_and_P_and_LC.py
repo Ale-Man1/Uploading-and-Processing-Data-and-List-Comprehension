@@ -45,24 +45,24 @@ def main():
             elif col == "Classification of Vehicle":
                 # print(val)
                 seven.append(val)
-    #doesnt say to print so i wont
+    # doesn't say to print so i wont
 
     # Part 3:
     list_p3 = []
-    for i in range(len(one)):
+    for i in range(len(one)):  # create for loop to traverse price and grab indices of prices that are med
         if one[i] == "med":
             list_p3.append(df.index[i])
     print("Index Values with med as the price: ", list_p3)
 
     # Part 4:
     list_p4 = []
-    for i in list_p3:
+    for i in list_p3:  # For loop created to traverse the numbers found in list_p3 and grab the values of passenger numbers for those specific indices
         list_p4.append(four[i - 1])
     print("Number of Passengers for the values with the price of med: ", list_p4)
 
     # Part 5:
     list_p5 = []
-    for i in range(len(one)):
+    for i in range(len(one)):  # For loop with if statement inside to grab indices with high price and non-low maintenance costs
         if one[i] == "high" and two[i] != "low":
             list_p5.append(df.index[i])
     print("Index Values with high price and not low maintenance cost: ", list_p5)
@@ -81,7 +81,7 @@ def main():
 
     # Part 1 of the question at the bottom (the only part):
     nlist = [[1, 2, 3], ["A", "B", "C"], [4, 5], ["D", "E"]]
-    new_list = [ a for b in nlist for a in b ]
+    new_list = [a for b in nlist for a in b]
     print(new_list)
 
 
